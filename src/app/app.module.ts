@@ -10,8 +10,8 @@ import { HomePage } from '../pages/home/home';
 import { Pro } from '@ionic/pro';
 import { Injectable, Injector } from '@angular/core';
 
-Pro.init('YOUR_APP_ID', {
-  appVersion: 'APP_VERSION'
+Pro.init('7009E6FF', {
+  appVersion: '0.0.1'
 })
 
 @Injectable()

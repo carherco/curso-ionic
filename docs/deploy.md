@@ -80,6 +80,9 @@ const newFn = Pro.monitoring.wrap(() => {
 newFn();
 ```
 
+Configurar monitorización
+
+<https://ionicframework.com/docs/pro/basics/getting-started/#pro-client-setup>
 
 ## Ionic View 
 
