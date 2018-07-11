@@ -86,4 +86,5 @@
         <variable name="CHANNEL_NAME" value="Production" />
         <variable name="UPDATE_METHOD" value="auto" />
     </plugin>
+    <engine name="android" spec="~6.2.3" />
 </widget>

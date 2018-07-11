@@ -53,9 +53,18 @@ cordova plugin add cordova-plugin-ionic --save \
 
 <https://ionicframework.com/docs/pro/deploy/setup/#usage>
 
+Asignar commits nuevos a canales
+
 
 
 Solamente funcionará si no necesitamos permisos nuevos.
+
+
+
+## Monitorización
+
+<https://ionicframework.com/docs/pro/monitoring/>
+
 
 
 
