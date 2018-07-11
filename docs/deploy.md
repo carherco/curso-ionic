@@ -65,7 +65,20 @@ Solamente funcionará si no necesitamos permisos nuevos.
 
 <https://ionicframework.com/docs/pro/monitoring/>
 
+```
+Pro.monitoring.exception(new Error('error'));
 
+Pro.monitoring.log('This happens sometimes', { level: 'error' });
+
+Pro.monitoring.call(() => {
+  throw new Error('error');
+});
+
+const newFn = Pro.monitoring.wrap(() => {
+  throw new Error('error');
+});
+newFn();
+```
 
 
 ## Ionic View 
