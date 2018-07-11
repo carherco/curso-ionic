@@ -34,3 +34,16 @@
 
 
 ## Deploy contínuo (con Ionic Pro)
+
+
+
+
+
+
+Solamente funcionará si no necesitamos permisos nuevos.
+
+
+
+## Ionic View 
+
+Ionic View deja de tener soporte y de estar operativo el 1 de septiembre de 2018

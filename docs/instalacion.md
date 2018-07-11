@@ -39,5 +39,26 @@ blank: A blank starter project.
 > cd ./myNewProject
 > ionic serve
 
+```
+Local: http://localhost:8100
+External: http://192.168.0.243:8100
+DevApp: curso@8100 on MacBook-Pro-de-Carlos.local
+```
+
+
+## Modo lab
+
+> ionic serve --lab
+
+
+## Ionic DevApp
+
+<https://ionicframework.com/docs/pro/devapp/>
+
+Para ver por el terminal los logs ocurridos en el móvil
+
+> ionic serve -c
+
+Revisar la lista de Native Cordova Plugin Support de DevApp al final del link anterior.
 
 
