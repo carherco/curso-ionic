@@ -9,7 +9,8 @@ import { Pro } from '@ionic/pro';
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
-    Pro.monitoring.exception(new Error('error'));
+    //Pro.monitoring.exception(new Error('error'));
+    Pro.monitoring.log('This happens sometimes', { level: 'error' })
   }
 
 }
