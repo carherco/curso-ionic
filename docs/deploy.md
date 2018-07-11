@@ -35,8 +35,23 @@
 
 ## Deploy contínuo (con Ionic Pro)
 
+> sudo npm install -g ionic@latest
+
+> ionic link --pro-id 7009e6ff
+
+En Code => Channels => Crear y Set up los Channels que queramos
 
 
+```
+cordova plugin add cordova-plugin-ionic --save \
+--variable APP_ID="7009e6ff" \
+--variable CHANNEL_NAME="Production" \
+--variable UPDATE_METHOD="auto" \
+--variable MAX_STORE="2" \
+--variable WARN_DEBUG="false"
+```
+
+<https://ionicframework.com/docs/pro/deploy/setup/#usage>
 
 
 
