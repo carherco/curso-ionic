@@ -46,7 +46,7 @@ DevApp: curso@8100 on MacBook-Pro-de-Carlos.local
 ```
 
 
-## Modo lab
+## Modo lab
 
 > ionic serve --lab
 

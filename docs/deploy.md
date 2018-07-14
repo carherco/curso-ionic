@@ -41,7 +41,6 @@
 
 En Code => Channels => Crear y Set up los Channels que queramos
 
-
 ```
 cordova plugin add cordova-plugin-ionic --save \
 --variable APP_ID="7009e6ff" \
@@ -55,11 +54,7 @@ cordova plugin add cordova-plugin-ionic --save \
 
 Asignar commits nuevos a canales
 
-
-
 Solamente funcionará si no necesitamos permisos nuevos.
-
-
 
 ## Monitorización
 
@@ -87,3 +82,7 @@ Configurar monitorización
 ## Ionic View 
 
 Ionic View deja de tener soporte y de estar operativo el 1 de septiembre de 2018
+
+## Planes de Ionic Pro
+
+<https://ionicframework.com/pro/pricing>

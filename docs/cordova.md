@@ -4,14 +4,13 @@
 
 ## Cómo incorporar un plugin de cordova
 
-1) Instalación
+1. Instalación
 
 > ionic cordova plugin add cordova-plugin-camera
+
 > npm install --save @ionic-native/camera
 
-2) Añadir el plugin al módulo raíz (app.module)
-
-
+2. Añadir el plugin al módulo raíz (app.module)
 
 ## Ejercicios
 

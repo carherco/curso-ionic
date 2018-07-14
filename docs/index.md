@@ -12,14 +12,11 @@ Las aplicaciones Ionic funcionan con Angular, TypeScript, Sass y Cordova.
 - [Testeo y depuración en dispositivos móviles](./testeo.md)
 - [Deployment (generar archivos y subir a las Stores)](./deploy.md)
 
+> ionic start nombreproyecto blank
 
-
-
-> ionic start bruggeboardgame blank
 > ionic login
+
 > ionic link --pro-id e72b31c7
-
-
 
 
 - Incluir videos. => Cordova

@@ -8,7 +8,9 @@ Requisitos:
 ## Instalación
 
 > npm install -g ionic@latest
+
 > ionic --version
+
 > ionic --help
 
 <https://ionicframework.com/docs/cli/commands.html>
@@ -66,11 +68,9 @@ El comando *ionic cordova* es un wrap del comando *cordova*.
 
 <https://ionicframework.com/docs/cli/build/>
 
-
 ## Modo verbose
 
 El modificador --verbose mostrará mensajes de DEBUG por pantalla.
-
 
 <https://ionicframework.com/docs/cli/>
 
