@@ -54,7 +54,7 @@ El comando *ionic cordova* es un wrap del comando *cordova*.
 
 > ionic cordova platform add android ios
 
-## Ejectuar una aplicación en el móvil
+## Ejectuar una aplicación en el móvil
 
 > ionic cordova run android
 > ionic cordova run ios
@@ -74,25 +74,3 @@ El modificador --verbose mostrará mensajes de DEBUG por pantalla.
 
 <https://ionicframework.com/docs/cli/>
 
-
-
-    config <subcommand> ...... Manage CLI and project config values (subcommands: get, set)
-    docs ..................... Open the Ionic documentation website
-    info ..................... Print system/environment info
-    login .................... Login with your Ionic ID
-    signup ................... Create an Ionic account
-    ssh <subcommand> ......... Commands for configuring SSH keys (subcommands: add, delete, generate, list, setup, use)
-    start .................... Create a new project
-    telemetry ................ (deprecated) Opt in and out of telemetry
-
-    build .................... Build web assets and prepare your app for any platform targets
-    cordova <subcommand> ..... Cordova functionality (subcommands: build, compile, emulate, platform, plugin, prepare, 
-                               requirements, resources, run)
-    doctor <subcommand> ...... Commands for checking the health of your Ionic project (subcommands: check, ignore, list)
-    generate ................. Generate pipes, components, pages, directives, providers, and tabs (ionic-angular >= 
-                               3.0.0) (alias: g)
-    git <subcommand> ......... Commands relating to git (subcommands: remote)
-    integrations <subcommand>  Add or disable various integrations in your app (subcommands: disable, enable)
-    link ..................... Connect your local app to Ionic
-    monitoring <subcommand> .. Commands relating to Ionic Pro error monitoring (subcommands: syncmaps)
-    serve .................... Start a local dev server for app dev/testing

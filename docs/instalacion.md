@@ -60,5 +60,3 @@ Para ver por el terminal los logs ocurridos en el móvil
 > ionic serve -c
 
 Revisar la lista de Native Cordova Plugin Support de DevApp al final del link anterior.
-
-
