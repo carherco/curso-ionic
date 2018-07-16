@@ -28,6 +28,7 @@ Requisitos:
 ## Servir la aplicación en el navegador
 
 > cd ./myNewProject
+
 > ionic serve
 
 <https://ionicframework.com/docs/cli/serve/>
@@ -44,6 +45,7 @@ Requisitos:
 El comando ionic start ya pregunta si queremos instalar Cordova
 
 > npm install -g cordova
+
 > ionic cordova --help
 
 El comando *ionic cordova* es un wrap del comando *cordova*.
@@ -57,6 +59,7 @@ El comando *ionic cordova* es un wrap del comando *cordova*.
 ## Ejectuar una aplicación en el móvil
 
 > ionic cordova run android
+
 > ionic cordova run ios
 
 <https://ionicframework.com/docs/cli/cordova/run>
@@ -64,6 +67,7 @@ El comando *ionic cordova* es un wrap del comando *cordova*.
 ## Construir el binario de una aplicación
 
 > ionic cordova build android
+
 > ionic cordova build ios
 
 <https://ionicframework.com/docs/cli/build/>
