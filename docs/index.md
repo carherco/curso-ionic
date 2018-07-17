@@ -10,7 +10,7 @@ Las aplicaciones Ionic funcionan con Angular, TypeScript, Sass y Cordova.
   - [Ionic Page](./ionicPage.md)
   - [Componentes de navegación](./navigation.md)
   - [Otros componentes de interfaz](./interfaz.md)
-  - [Gestures](./gestures)
+  - [Gestures](./gestures.md)
 - [Eventos](./eventos.md)
 - [Cordova](./cordova.md)
 - [Deployment (generar archivos y subir a las Stores)](./deploy.md)
