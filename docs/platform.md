@@ -109,19 +109,19 @@ export MyApp {
 
 - **registerBackButtonAction(fn, priority)**
 
-The back button event is triggered when the user presses the native platform’s back button, also referred to as the “hardware” back button. This event is only used within Cordova apps running on Android and Windows platforms. This event is not fired on iOS since iOS doesn’t come with a hardware back button in the same sense an Android or Windows device does.
+El evento *back button* se dispara cuando el usuario presiona el botón físico de volver del dispositivo (se le suele conocer como *"hardware back button"*). Este evento solamente se utilizar en apps que se ejecutan en dispositivos Android o Windows. iOs no tiene botón físico de volver como tal.
 
-Registering a hardware back button action and setting a priority allows apps to control which action should be called when the hardware back button is pressed. This method decides which of the registered back button actions has the highest priority and should be called.
+Registrar una acción para el botón de volver nos permite controlar lo que ocurre cuando se utilice dicho botón. Si se registran varias funciones, se utilizará la que tenga mayor prioridad.
 
-Param	Type	Details
-fn	Function	
-Called when the back button is pressed, if this registered action has the highest priority.
+Parámetros de entrada:
 
-priority	number	
-Set the priority for this action. Only the highest priority will execute. Defaults to 0.
+- fn	(Function)	
 
-Returns: Function
-A function that, when called, will unregister the back button action.
+- priority	(number)	
+
+Retorno: (Function) 
+
+El método devuelve una función. Si dicha función es llamada, se desregistrará la acción.
 
 - **resize**
 
@@ -219,7 +219,7 @@ El atributo showWhen permite añadir elementos al DOM únicamente en plataformas
 
 ## HideWhen
 
-El complementario de showWhen. 
+El complementario de showWhen.
 
 ```html
 <div hideWhen="android">

@@ -21,7 +21,7 @@ constructor(public events: Events) {
 
 ## publish(topic, eventData)
 
-Emite un evento
+Emite/dispara un evento
 
 ## subscribe(topic, handler)
 

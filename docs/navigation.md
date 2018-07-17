@@ -48,7 +48,7 @@ export class StartPage {
 
 El componente &lt;ion-nav> extiende la clase NavController class.
 
-## Push
+## Push
 
 Para navegar de una página a otra, simplemente hacemos **push** en la pila.
 
@@ -429,9 +429,6 @@ class Tab2 {
 https://ionicframework.com/docs/components/#tabs
 
 
-
-
-
 ## Menu
 
 El componente **Menu** aparece y desaparece por un lateral. Por defecto por está a la izquierda, pero se puede cambiar.
@@ -452,6 +449,13 @@ El menú &lt;ion-menu> debe ser hermano (sibling) del contenido al que pertenece
 <ion-nav #mycontent [root]="rootPage"></ion-nav>
 ```
 
+## Menu Side
+
+Para poner el menú en la derecha basta con indicarlo en el atributo **side**
+
+```html
+<ion-menu side="right" [content]="mycontent">...</ion-menu>
+```
 
 ## Menu Types
 
@@ -461,20 +465,6 @@ EL display por defecto depende de la plataforma, pero se puede cambiar.
 
 - Material Design and Windows => overlay
 - iOS => reveal
-
-## Persistent Menus
-
-Los menús persistentes muestran el botón de *toggle* en todas las páginas de la pila de navegación. Para convertir un menú en persistente hay que establecer a **true** la propiedad **persistent** en el &lt;ion-menu>.
-
-## Menu Side
-
-Para poner el menú en la derecha basta con indicarlo en el atributo **side**
-
-```html
-<ion-menu side="right" [content]="mycontent">...</ion-menu>
-```
-
-## Menu Type
 
 El tipo de menú se puede cambiar a través del atributo **type**.
 
@@ -507,6 +497,10 @@ Para hacer toggle desde la plantilla basta con añadir un *button* con la direct
 <button ion-button menuToggle>Toggle Menu</button>
 ```
 
+Si este botón se coloca en el NavBar de una página, solamente será visible cuando dicha página sea la *root Page*.
+
+<https://ionicframework.com/docs/api/components/menu/MenuToggle/>
+
 Para cerrar el menú tenemos la directiva **menuClose**
 
 ```typescript
@@ -519,22 +513,15 @@ Para cerrar el menú tenemos la directiva **menuClose**
 </ion-menu>
 ```
 
-El menú también se puede controlar desde el componente a través de métodos del **MenuController**.
 
-```typescript
-import { Component } from '@angular/core';
-import { MenuController } from 'ionic-angular';
 
-@Component({...})
-export class MyPage {
- constructor(public menuCtrl: MenuController) {}
+## Persistent Menus
 
- openMenu() {
-   this.menuCtrl.open();
- }
-}
+Los menús persistentes muestran el botón de *toggle* en todas las páginas de la pila de navegación. Para convertir un menú en persistente hay que establecer a **true** la propiedad **persistent** en el &lt;ion-menu>.
+
+```html
+<ion-menu persistent="true" [content]="mycontent">...</ion-menu>
 ```
-
 
 ## Propiedades
 
@@ -560,3 +547,62 @@ export class MyPage {
 - **ionDrag**: Se emite cuando se está arrastrando el menú para abrirlo.	
 
 - **ionOpen**: Se emite cuando el menú ha sido abierto.	
+
+
+## MenuController
+
+El menú también se puede controlar desde el componente a través de métodos del **MenuController**.
+
+```typescript
+import { Component } from '@angular/core';
+import { MenuController } from 'ionic-angular';
+
+@Component({...})
+export class MyPage {
+ constructor(public menuCtrl: MenuController) {}
+
+ openMenu() {
+   this.menuCtrl.open();
+ }
+}
+```
+
+## Múltiples menús en la misma página
+
+Ejemplo de dos menús en el mismo lado:
+
+```html
+<ion-menu id="authenticated" side="left" [content]="mycontent">...</ion-menu>
+<ion-menu id="unauthenticated" side="left" [content]="mycontent">...</ion-menu>
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+```
+
+```typescript
+enableAuthenticatedMenu() {
+  this.menuCtrl.enable(true, 'authenticated');
+  this.menuCtrl.enable(false, 'unauthenticated');
+}
+```
+
+
+Ejemplo de un menú a la izquierda y otro a la derecha
+
+```html
+<ion-menu side="left" [content]="mycontent">...</ion-menu>
+<ion-menu side="right" [content]="mycontent">...</ion-menu>
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+```
+
+```typescript
+toggleLeftMenu() {
+  this.menuCtrl.toggle();
+}
+
+toggleRightMenu() {
+  this.menuCtrl.toggle('right');
+}
+```
+
+## Métodos de menuController
+
+<https://ionicframework.com/docs/api/components/app/MenuController

@@ -14,9 +14,11 @@
 
 ## Ejercicios
 
+- Controlar el flash: <https://ionicframework.com/docs/native/flashlight/>
+
 - Estado de la batería: <https://ionicframework.com/docs/native/battery-status/>
 
-- LLamar a un número de teléono: <https://ionicframework.com/docs/native/call-number/>
+- LLamar a un número de teléfono: <https://ionicframework.com/docs/native/call-number/>
 
 - Cámara de fotos: <https://ionicframework.com/docs/native/camera/>
 
