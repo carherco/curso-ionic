@@ -20,12 +20,29 @@ class MyErrorHandler implements ErrorHandler {
 class MyModule {}
 ```
 
+## Custom Error Handlers
+
+Podemos programar nuestro propio manejador de errores para sustituir el de por defecto o incluso extender el de Ionic.
+
+```typescript
+class MyErrorHandler implements ErrorHandler {
+  handleError(err: any): void {
+    // do something with the error
+  }
+}
+
+@NgModule({
+  providers: [{ provide: ErrorHandler, useClass: MyErrorHandler }]
+})
+class AppModule {}
+```
+
 https://angular.io/api/core/ErrorHandler
 
 
 ## IonicErrorHandler
 
-La clase **IonicErrorHandler** intercepta el manejador de errores de consola por defecto y muestra los errores de tiempo de ejecución como una superposición cuando se utiliza el servidor de compilación Dev de Ionic.
+La clase **IonicErrorHandler** intercepta el manejador de errores de consola por defecto y muestra los errores de tiempo de ejecución en el dashboard de Ionic.
 
 ```typescript
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -37,12 +54,12 @@ import { IonicErrorHandler } from 'ionic-angular';
 class AppModule {}
 ```
 
-## Custom Error Handlers
+## Custom Ionc Error Handlers
 
 Podemos programar nuestro propio manejador de errores para sustituir el de por defecto o incluso extender el de Ionic.
 
 ```typescript
-class MyErrorHandler implements ErrorHandler {
+class MyErrorHandler extends IonicErrorHandler {
   handleError(err: any): void {
     // do something with the error
   }

@@ -217,7 +217,7 @@ El atributo showWhen permite añadir elementos al DOM únicamente en plataformas
 </div>
 ```
 
-## HideWhen
+## HideWhen
 
 El complementario de showWhen.
 
