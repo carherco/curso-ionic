@@ -1,8 +1,31 @@
 # Manejo de errores
 
-La clase **IonicErrorHandler** intercepta el manejador de errores de consola por defecto y  intercepts the default Console error handling and displays runtime errors as an overlay when using Ionic's Dev Build Server.
+## ErrorHandler
 
-IonicErrorHandler Example
+La implementación por defecto de **ErrorHandler** saca los mensajes de error en la consola.
+
+Para interceptar el manejo de errores, tenemos que crearnos un manejador personalizado que reemplace el comportamiento original.
+
+```typescript
+content_copy
+class MyErrorHandler implements ErrorHandler {
+  handleError(error) {
+    // do something with the exception
+  }
+}
+
+@NgModule({
+  providers: [{provide: ErrorHandler, useClass: MyErrorHandler}]
+})
+class MyModule {}
+```
+
+https://angular.io/api/core/ErrorHandler
+
+
+## IonicErrorHandler
+
+La clase **IonicErrorHandler** intercepta el manejador de errores de consola por defecto y muestra los errores de tiempo de ejecución como una superposición cuando se utiliza el servidor de compilación Dev de Ionic.
 
 ```typescript
 import { NgModule, ErrorHandler } from '@angular/core';

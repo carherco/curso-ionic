@@ -1,5 +1,11 @@
 # Deploy
 
+## Generar resources
+
+> ionic cordova resources
+
+Coge el icon.png y el splash.png del directorio resources y genera iconos y pantallas de splash para todos los tamaños de dispositivos.
+
 ## Para Android:
 
 1) Generar una key (solamente una vez)
