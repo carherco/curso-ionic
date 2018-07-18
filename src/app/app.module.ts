@@ -52,8 +52,8 @@ export class MyErrorHandler implements ErrorHandler {
   providers: [
     StatusBar,
     SplashScreen,
-    IonicErrorHandler,
-    [{ provide: ErrorHandler, useClass: MyErrorHandler }]
+    //IonicErrorHandler,
+    [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
   ]
 })
 export class AppModule {}

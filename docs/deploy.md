@@ -17,7 +17,7 @@
 
 > cd platforms/android/build/outputs/apk/
 
-> ~/Library/Android/sdk/build-tools/25.0.1/zipalign -v 4 android-release-unsigned.apk BuscaTuTerraza.apk
+> ~/Library/Android/sdk/build-tools/25.0.1/zipalign -v 4 android-release-unsigned.apk Stiga.apk
 
 
 ## Para IOS:
