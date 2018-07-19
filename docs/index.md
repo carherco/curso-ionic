@@ -20,10 +20,3 @@ Las aplicaciones Ionic funcionan con Angular, TypeScript, Sass y Cordova.
 - [Manejo de errores](./errorHandler.md)
 - [Diseñar un tema para la app](./tema.md)
 
-> ionic start nombreproyecto blank
-
-> ionic login
-
-> ionic link --pro-id e72b31c7
-
-
