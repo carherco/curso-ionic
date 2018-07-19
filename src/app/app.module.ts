@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 
 import { Pro } from '@ionic/pro';
 import { Injectable, Injector } from '@angular/core';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 Pro.init('7009E6FF', {
   appVersion: '0.0.1'
@@ -52,6 +53,7 @@ export class MyErrorHandler implements ErrorHandler {
   providers: [
     StatusBar,
     SplashScreen,
+    Diagnostic,
     //IonicErrorHandler,
     [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
   ]

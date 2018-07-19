@@ -1,6 +1,6 @@
 # Diseñar un tema para la app
 
-Ionic is built on top of Sass,
+Los estilos en Ionic están definidos con Sass.
 
 ## CSS Utilities
 
@@ -34,9 +34,11 @@ $grid-padding-widths: (
 ) !default;
 ```
 
-Breakpoints
+## Custom Breakpoints
 
-To customize the breakpoints and their values, override the values of $grid-breakpoints and $grid-max-widths. For example, to only use 3 breakpoints, the following could be written:
+Para personalizra los valores de los breakpoints, hay que sobreescribir las variables **$grid-breakpoints** y **$grid-max-widths**.
+
+Por ejemplo:
 
 ```scss
 $grid-breakpoints: (
@@ -53,7 +55,7 @@ $grid-max-widths: (
 ```
 
 
-## Custom Colors
+## Custom Colors
 
 Para cambiar los colores del tema, basta con cambiar el mapa de colores.
 
@@ -116,16 +118,37 @@ my-component {
 
 ## Overriding Ionic Sass Variables
 
-There are many variables you can override with Ionic. Any of the following variables can be overridden from your src/theme/variables.scss file, just add a new value to the file:
-
-```scss
-$text-color: #000099;
-
-$colors(
-  ...
-)
-```
-
-En este link se pueden consultar todas las variables:
+En este link se pueden consultar todas las variables de Ionic que se pueden sobreescribir
 
 <https://ionicframework.com/docs/theming/overriding-ionic-variables/>
+
+
+## Platform Specific Styles
+
+Ionic añade a la etiqueta raíz &lt;ion-app> una class que identifica el tipo de dispositivo. 
+
+Por ejemplo en Android:
+
+```html
+<ion-app class="md">
+```
+
+Identificadores: 
+
+- ios: **ios** => Para iphone, ipad, or ipod.
+- android: **md**	=> Para dispositivos Android
+- windows: **wp** => Dispositivos windows ejecutando Cordova
+
+Cualquier otro tipo de dispositivo distinto de los anteriores tendrá el identificador **md**.
+
+Esto quiere decir que podemos aplicar estilos que afecten únicamente a una plataforma:
+
+```scss
+.md .button {
+  text-transform: capitalize;
+}
+```
+
+
+<https://ionicframework.com/docs/theming/platform-specific-styles/>
+

@@ -16,7 +16,7 @@ Y también @ionic/storage, aunque ya viene instalado por defecto a partir de Ion
 
 > npm install --save @ionic/storage
 
-Para utilizarlos, hay que importarlos en nuestro algún módulo, por ejemplo en src/app/app.module.ts:
+Para utilizarlos, hay que importarlos en nuestro módulo, por ejemplo en src/app/app.module.ts:
 
 ```typescript
 import { IonicStorageModule } from '@ionic/storage';
@@ -41,7 +41,7 @@ import { IonicStorageModule } from '@ionic/storage';
 export class AppModule {}
 ```
 
-E inyectarlos en nuestros componenntes o páginas:
+E inyectarlos en nuestros componentes o páginas:
 
 ```typescript
 import { Storage } from '@ionic/storage';

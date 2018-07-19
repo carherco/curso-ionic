@@ -1,6 +1,6 @@
 # Deploy
 
-## Generar resources
+## Generar resources
 
 > ionic cordova resources
 
@@ -62,7 +62,7 @@ Asignar commits nuevos a canales
 
 Solamente funcionará si no necesitamos permisos nuevos.
 
-## Monitorización
+## Monitorización
 
 <https://ionicframework.com/docs/pro/monitoring/>
 

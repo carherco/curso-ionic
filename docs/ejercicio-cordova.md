@@ -14,6 +14,14 @@
 
 7) Si el usuario pulsa alguno de los otros dos botones, se abrirá la app de mapas del móvil (plugin **LaunchNavigator**) con el mapa indicando la posición elegida.
 
+```typescript
+platform.ready().then( 
+
+  
+);
+```
+
+
 
 
 ```typescript
