@@ -15,6 +15,7 @@ Las aplicaciones Ionic funcionan con Angular, TypeScript, Sass y Cordova.
 - [Cordova](./cordova.md)
 - [Deployment (generar archivos y subir a las Stores)](./deploy.md)
 - [El servicio Platform](./platform.md)
+- [El servicio Config](./config.md)
 - [El servicio storage](./storage.md)
 - [Manejo de errores](./errorHandler.md)
 - [Diseñar un tema para la app](./tema.md)
