@@ -1,13 +1,12 @@
 # Gestos
 
-Ionic proporiciona eventos con los que hacer binding de los siguientes gestos:
+En Ionic 4, los gestures se controlan con la librería hammer.js
 
-- tap (tocar)
-- press (presionar)
-- pan (desplazar)
-- swipe (deslizar)
-- rotate (rotar)
-- pinch (pellizcar)
+https://forum.ionicframework.com/t/solved-ionic-4-press-tap-events/144385
+
+https://blog.angularindepth.com/gestures-in-an-angular-application-dde71804c0d0
+
+https://medium.com/madewithply/ionic-4-long-press-gestures-96cf1e44098b
 
 Ejemplo:
 

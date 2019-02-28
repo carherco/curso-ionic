@@ -1,6 +1,8 @@
 # Instalación
 
-Requisitos:
+Para trabajar con Ionic hay que instalarse el Command Line Interface (CLI).
+
+## Requisitos
 
 - Node 6 LTS
 - NPM 3+
@@ -19,20 +21,11 @@ Requisitos:
 
 ### Starter templates
 
--**tabs**: A starting project with a simple tabbed interface
-blank: A blank starter project.
+-**blank**: Un proyecto en blanco
 
--**sidemenu**: A starting project with a side menu with navigation in the content area.
+-**tabs**: Un proyecto con un layout de tabs
 
--**super**: A starting project complete with pre-built pages, providers and best practices for Ionic development.
-
--**conference**: A project that demonstrates a realworld application.
-
--**tutorial**: A tutorial based project that goes along with the Ionic documentation.
-
--**aws**: AWS Mobile Hub Starter.
-
-
+-**sidemenu**: Un proyecto con un menú lateral
 
 ## Servir la aplicación en el navegador
 
@@ -45,11 +38,9 @@ External: http://192.168.0.243:8100
 DevApp: curso@8100 on MacBook-Pro-de-Carlos.local
 ```
 
-
 ## Modo lab
 
 > ionic serve --lab
-
 
 ## Ionic DevApp
 

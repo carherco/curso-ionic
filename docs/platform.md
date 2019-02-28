@@ -2,46 +2,17 @@
 
 El servicio **Platform** permite obtener información sobre el dispositivo utilizado, la orientación actual del mismo, la dirección del lenguaje (left-to-right o right-to-left), etc.
 
+Atención: Este servicio a cambiado entre la versión 3 y la 4.
+
 Para disponer del servicio basta con inyectarlo.
 
 ```typescript
-import { Platform } from 'ionic-angular';
+import { Platform } from '@ionic/angular';
 
 @Component({...})
 export MyPage {
-  constructor(public plt: Platform) {
-
-  }
-}
-```
-
-Instance Members
-
-- **dir()**
-
-Devuele la dirección del lenguaje. 
-
-- **getQueryParam()**
-
-Devuelve la query string.
-
-- **height()**
-
-Devuelve el window.innerHeight.
-
-- **is(platformName)**
-
-Devuelve un booleano.
-
-Ejemplo:
-
-```typescript
-import { Platform } from 'ionic-angular';
-
-@Component({...})
-export MyPage {
-  constructor(public plt: Platform) {
-    if (this.plt.is('ios')) {
+  constructor(public platform: Platform) {
+    if (this.platform.is('ios')) {
       // This will only print when on iOS
       console.log('I am an iOS device!');
     }
@@ -49,146 +20,140 @@ export MyPage {
 }
 ```
 
-Nombres de plataformas:
+## Platform.ready()
 
-- android: en un dispositivo que ejecuta Android.
-- cordova: en un dispositivo que ejecuta Cordova.
-- core: en un dispositivo de escritorio (desktop device).
-- ios: en un dispositivo que ejecuta iOS.
-- ipad: en un iPad.
-- iphone: en un iPhone.
-- mobile: en un móvil.
-- mobileweb: en un navegador en un dispositivo móvil.
-- phablet: en una phablet.
-- tablet: en una tablet.
-- windows:en un dispositivo que ejecuta Windows.
+El método **ready()** devuelve una promesa que se resolverá cuando el dispositivo esté listo.
 
-
-- **isLandscape()**
-
-Devuelve true si el dispositivo está en horizontal.
-
-- **isPortrait()**
-
-Devuelve true si el dispositivo está en vertical.
-
-- **isRTL()**
-
-Devuelve true si la dirección del texto de la app es right-to-left.
-
-- **lang()**
-
-Devuelve el lenguaje de la app.
-
-- **pause**
-
-El evento *pause* emite cuando la plataforma nativa pone la aplicación en background, normalmente cuando el usuario cambia a otra aplicación. Emite en aplicaciones Cordova pero no en navegadores estándar.
-
-- **platforms()**
-
-Devuelve un array de valores de platforms
-
-- **ready()**
-
-Devuelve una promesa cuando la plataforma está lista y las funcionalidades nativas pueden ser llamadas. Si es un navegador web, entonces la promesa se resuelve cuando el DOM está listo.
+Es buena práctica utilizarlo en las llamadas a librerías nativas. 
 
 ```typescript
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
-
-@Component({...})
-export MyApp {
-  constructor(public plt: Platform) {
-    this.plt.ready().then((readySource) => {
-      console.log('Platform ready from', readySource);
-      // Platform now ready, execute any required native code
-    });
+this.platform.ready().then(() => {
+  if (this.platform.is('cordova')) {
+    // make your native API calls
+  } else {
+    // fallback to browser APIs
   }
-}
+});
 ```
 
-- **registerBackButtonAction(fn, priority)**
+## Platform.is()
 
-El evento *back button* se dispara cuando el usuario presiona el botón físico de volver del dispositivo (se le suele conocer como *"hardware back button"*). Este evento solamente se utilizar en apps que se ejecutan en dispositivos Android o Windows. iOs no tiene botón físico de volver como tal.
+El método **is()** nos devuelve un booleano indicando si la plataforma en la que se está ejecutando la aplicación es del tipo que hemos preguntado:
 
-Registrar una acción para el botón de volver nos permite controlar lo que ocurre cuando se utilice dicho botón. Si se registran varias funciones, se utilizará la que tenga mayor prioridad.
-
-Parámetros de entrada:
-
-- fn	(Function)	
-
-- priority	(number)	
-
-Retorno: (Function) 
-
-El método devuelve una función. Si dicha función es llamada, se desregistrará la acción.
-
-- **resize**
-
-El evento *resize* emite cuando la plataforma nativa recupera la aplicación del background. Emite en aplicaciones Cordova pero no en navegadores estándar.
-
-- **resume**
-
-El evento *resize* emite cuando la plataforma nativa recupera la aplicación del background. Emite en aplicaciones Cordova pero no en navegadores estándar.
-
-```typescript
-constructor( private platform: Platform ) {
-    platform.ready().then(() => {
-        this.platform.pause.subscribe(() => {
-            console.log('[INFO] App paused');
-        });
-
-        this.platform.resume.subscribe(() => {
-            console.log('[INFO] App resumed');
-        });
-    });
-}
 ```
-
-- **setDir(dir, updateDocument)**
-
-Establece la dirección del lenguaje. Si update document es *true* se actualiza también la etiqueta html. 
-
-```html
-<html dir="ltr">
-```
-
-- **setLang(language, updateDocument)**
-
-Establece el lenguaje de la aplicación. Si el segundo parámetro es *true* actualiza también la etiqueta html.
-
-```html
-<html lang="es-MX">
-```
-
-- **testUserAgent()**
-
-- **url()**
-
-Devuelve la url actual.
-
-- **versions()**
-
-Devuelve un objeto con información sobre la versión de todas las plataformas.
-
-```typescript
-import { Platform } from 'ionic-angular';
+import { Platform } from '@ionic/angular';
 
 @Component({...})
 export MyPage {
-  constructor(public plt: Platform) {
-    // This will print an object containing
-    // all of the platforms and their versions
-    console.log(plt.versions());
+  constructor(public platform: Platform) {
+    if (this.platform.is('ios')) {
+      // This will only print when on iOS
+      console.log('I am an iOS device!');
+    }
   }
 }
 ```
 
-- **width()**
+```
+| Platform Name   | Description                        |
+|-----------------|------------------------------------|
+| android         | on a device running Android.       |
+| cordova         | on a device running Cordova.       |
+| ios             | on a device running iOS.           |
+| ipad            | on an iPad device.                 |
+| iphone          | on an iPhone device.               |
+| phablet         | on a phablet device.               |
+| tablet          | on a tablet device.                |
+| electron        | in Electron on a desktop device.   |
+| pwa             | as a PWA app.   |
+| mobile          | on a mobile device.                |
+| desktop         | on a desktop device.               |
+| hybrid          | is a cordova or capacitor app.     |
+```
 
-Devuelve el ancho del viewport utilizando (window.innerWidth)
+## Platform.platforms()
 
-<https://ionicframework.com/docs/api/platform/Platform/>
+El método **platforms()** devuelve un array de strings con las plataformas en las que se está ejecutando la app.
+
+Por ejemplo, en un iPhone, el método devolverá 'cordova', mobile', 'ios' y 'iphone'.
+
+```typescript
+import { Platform } from '@ionic/angular';
+
+@Component({...})
+export MyPage {
+  constructor(private platform: Platform) {
+    console.log(this.platform.platforms());
+  }
+}
+```
+
+## Platform.isRTL
+
+La propiedad isRTL es un booleano que nos indica si el dispositivo en el que se está ejecutando la app está configurado en modo RTL (Right-to-left). 
+
+
+## Platform.isLandscape() y Platform.isPortrait()
+
+
+Los métodos isLandscape() e isPortrait() devuelven booleanos que nos indican si el dispositivo está en horizontal o en vertical.
+
+## Platform.width() y Platform.height()
+
+Los métodos **width()** y **height()** nos devuelven el ancho y el alto de la pantalla respectivamente.
+
+
+Platform.pause, Plaform.resume y Plaform.resize
+==============================================
+
+Las propiedades **pause**, **resume** y **resize** son *Subjects*. Por lo tanto, nos podremos suscribir a ellas con *subscribe()*.
+
+- pause: este subject emite cuando la app pasa a segundo plano. Normalmente cuadno el usuario cambia a otra aplicación. No aplica a navegadores.
+
+- resume: este subject emite cuando la app vuelve a primer plano. No aplica a navegadores.
+
+- resize: este subject emite cuando la ventana del navegador cambia de dimensiones. o en un dispositivo móvil, cuando el usuario cambia la orientación.
+
+```typescript
+this.platform.pause.subscribe(
+  () => this.saveState()
+);
+
+this.platform.resume.subscribe(
+  () => this.restoreState()
+);
+
+this.platform.resize.subscribe(
+  () => {
+  	this.width = this.platform.width();
+  	this.height = this.platform.height();
+  }
+);
+```
+
+Enlaces de interés
+------------------
+
+- https://github.com/carherco/curso-angular/blob/master/docs/subject.md
+- http://reactivex.io/documentation/subject.html
+
+
+## Platform.backButton
+
+La propiedad **backButton** es un *Emitter* al que nos podemos suscribir con *subscribe()* para programar el comportamiento del botón de volver atrás. 
+
+```typescript
+this.platform.backButton.subscribe(
+  () => // ...
+);
+```
+
+Enlace de interés
+-----------------
+
+- https://github.com/carherco/curso-angular/blob/master/docs/event-emitters.md
+
+
 
 
 ## ShowWhen
