@@ -1,8 +1,7 @@
 {
-  "name": "curso",
-  "app_id": "7009e6ff",
-  "type": "ionic-angular",
+  "name": "curso2",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "angular"
 }
