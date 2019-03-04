@@ -108,3 +108,23 @@ export class AppModule { }
 
 - forEach(iteratorCallback): Itera sobre cada para clave, valor. Los parámetros de la función de callback son (value, key, iterationNumber). Devuelve una promesa cuando la iteración ha terminado.
 
+## Almacenes disponibles en los navegadores
+
+- Cookies: El único sistema disponible antes de HTML5. El menos seguro y el más limitado de todos.
+
+- Session Storage: permite almacenar parejas de clave/valor. Los datos están disponibles únicamente mientras dure la sesión.
+
+- Local Storage: permite almacenar parejas de clave/valor. Los datos están disponibles incluso si se cierra el navegador y se vuelve a abrir.
+
+- IndexedDB: Permite almacenar incluso imágenes y archivos. Permite indexar los datos para mejorar la rapidez en las consultas.
+
+- Web SQL: Base de datos basada en SQLite
+
+- Cache Storage: Almacena parejas de objetos Request/Response
+
+Application Cache: Almacena recursos. 
+
+https://developer.mozilla.org/es/docs/Web/HTML/Recursos_offline_en_firefox
+
+
+https://www.arkaitzgarro.com/html5/capitulo-8.html

@@ -46,7 +46,7 @@ DevApp: curso@8100 on MacBook-Pro-de-Carlos.local
 
 <https://ionicframework.com/docs/pro/devapp/>
 
-Para ver por el terminal los logs ocurridos en el móvil
+Para ver por el terminal los logs ocurridos en el móvil (con Ionic DevApp)
 
 > ionic serve -c
 
