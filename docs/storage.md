@@ -120,11 +120,22 @@ export class AppModule { }
 
 - Web SQL: Base de datos basada en SQLite
 
+```javascript
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+
+db.transaction(function (tx) {
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")');
+   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")');
+});
+```
+
+https://www.tutorialspoint.com/html5/html5_web_sql.htm
+
 - Cache Storage: Almacena parejas de objetos Request/Response
 
-Application Cache: Almacena recursos. 
+- Application Cache: Almacena recursos.
 
 https://developer.mozilla.org/es/docs/Web/HTML/Recursos_offline_en_firefox
-
 
 https://www.arkaitzgarro.com/html5/capitulo-8.html
