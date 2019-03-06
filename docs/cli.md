@@ -49,6 +49,10 @@ Tiene además un modo **lab** que se puede lanzar con el modificador --lab.
 
 > ionic serve --lab
 
+Para servir la aplicación y tenerla disponible para verla en Ionic DevApp se debe lanzar con el modificador --devapp
+
+> ionic serve --devapp
+
 <https://ionicframework.com/docs/cli/serve/>
 
 ## Generar elementos

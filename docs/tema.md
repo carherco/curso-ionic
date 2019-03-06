@@ -125,15 +125,15 @@ En este link se pueden consultar todas las variables de Ionic que se pueden sobr
 
 ## Platform Specific Styles
 
-Ionic añade a la etiqueta raíz &lt;ion-app> una class que identifica el tipo de dispositivo. 
+Ionic añade a la etiqueta raíz &lt;html> una class que identifica el tipo de dispositivo.
 
 Por ejemplo en Android:
 
 ```html
-<ion-app class="md">
+<html class="md"></html>
 ```
 
-Identificadores: 
+Identificadores:
 
 - ios: **ios** => Para iphone, ipad, or ipod.
 - android: **md**	=> Para dispositivos Android
@@ -144,11 +144,10 @@ Cualquier otro tipo de dispositivo distinto de los anteriores tendrá el identif
 Esto quiere decir que podemos aplicar estilos que afecten únicamente a una plataforma:
 
 ```scss
-.md .button {
+.md button {
   text-transform: capitalize;
 }
 ```
 
-
-<https://ionicframework.com/docs/theming/platform-specific-styles/>
+<https://ionicframework.com/docs/theming/platform-styles>
 
