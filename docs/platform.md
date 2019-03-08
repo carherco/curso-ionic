@@ -90,11 +90,9 @@ export MyPage {
 
 ## Platform.isRTL
 
-La propiedad isRTL es un booleano que nos indica si el dispositivo en el que se está ejecutando la app está configurado en modo RTL (Right-to-left). 
-
+La propiedad isRTL es un booleano que nos indica si el dispositivo en el que se está ejecutando la app está configurado en modo RTL (Right-to-left).
 
 ## Platform.isLandscape() y Platform.isPortrait()
-
 
 Los métodos isLandscape() e isPortrait() devuelven booleanos que nos indican si el dispositivo está en horizontal o en vertical.
 
@@ -102,9 +100,7 @@ Los métodos isLandscape() e isPortrait() devuelven booleanos que nos indican si
 
 Los métodos **width()** y **height()** nos devuelven el ancho y el alto de la pantalla respectivamente.
 
-
-Platform.pause, Plaform.resume y Plaform.resize
-==============================================
+## Platform.pause, Plaform.resume y Plaform.resize
 
 Las propiedades **pause**, **resume** y **resize** son *Subjects*. Por lo tanto, nos podremos suscribir a ellas con *subscribe()*.
 
@@ -131,13 +127,6 @@ this.platform.resize.subscribe(
 );
 ```
 
-Enlaces de interés
-------------------
-
-- https://github.com/carherco/curso-angular/blob/master/docs/subject.md
-- http://reactivex.io/documentation/subject.html
-
-
 ## Platform.backButton
 
 La propiedad **backButton** es un *Emitter* al que nos podemos suscribir con *subscribe()* para programar el comportamiento del botón de volver atrás. 
@@ -148,67 +137,8 @@ this.platform.backButton.subscribe(
 );
 ```
 
-Enlace de interés
------------------
+## Enlaces de interés
 
+- https://github.com/carherco/curso-angular/blob/master/docs/subject.md
+- http://reactivex.io/documentation/subject.html
 - https://github.com/carherco/curso-angular/blob/master/docs/event-emitters.md
-
-
-
-
-## ShowWhen
-
-El atributo showWhen permite añadir elementos al DOM únicamente en plataformas u orientaciones de pantalla específicas.
-
-```html
-<div showWhen="android">
- I am visible on Android!
-</div>
-
-<div showWhen="ios">
- I am visible on iOS!
-</div>
-
-<div showWhen="android,ios">
- I am visible on Android and iOS!
-</div>
-
-<div showWhen="portrait">
- I am visible on Portrait!
-</div>
-
-<div showWhen="landscape">
- I am visible on Landscape!
-</div>
-```
-
-## HideWhen
-
-El complementario de showWhen.
-
-```html
-<div hideWhen="android">
- I am hidden on Android!
-</div>
-
-<div hideWhen="ios">
- I am hidden on iOS!
-</div>
-
-<div hideWhen="android,ios">
- I am hidden on Android and iOS!
-</div>
-
-<div hideWhen="portrait">
- I am hidden on Portrait!
-</div>
-
-<div hideWhen="landscape">
- I am hidden on Landscape!
-</div>
-```
-
-Si se utiliza showWhen y hideWhen en el mismo atributo, el elemento NO se mostrará si hideWhen es true o si showWhen es false. 
-
-Si además se añade el attribute hidden, el elemento no se mostrará si hidden es true.
-

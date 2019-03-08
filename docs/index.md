@@ -14,6 +14,7 @@ Las aplicaciones Ionic funcionan con Angular, TypeScript, Sass y Cordova.
   - Diferencia entre páginas y componentes.
 - [Interfaz](./interfaz.md)
   - [Layout](./layout.md)
+  - [Grid](./grid.md)
   - Cómo utilizar la documentación de Ionic sobre los Componentes de UI.
   - Web Components y Shadow DOM.
 - [Cordova](./cordova.md)
@@ -21,7 +22,7 @@ Las aplicaciones Ionic funcionan con Angular, TypeScript, Sass y Cordova.
   - Mini-introducción a promesas y observables si es necesario
   - Ejemplos de plugins de acceso al hardware de los dispositivos (GPS, Cámara...)
   - Ejemplos de plugins de conexión con plataformas externas (Firebase)
-- [Consumo de APIs]
+- [Consumo de APIs](https://github.com/carherco/curso-angular/blob/master/docs/httpclient.md)
   - El Servicio HTTP de Angular
 - Almacenamiento de datos (LocalStorage, SQLite)
   - El servicio Ionic Storage
